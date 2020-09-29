@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: OMS_Test
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: vedika
+Implementation-Vendor-Id: com.citi
+Build-Jdk: 1.8.0_261
+Implementation-URL: https://spring.io/projects/spring-boot/OMS_Test
+Created-By: Maven Integration for Eclipse
+
