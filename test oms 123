@@ -1,0 +1,35 @@
+package com.citi;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class OMS_Test {
+
+	@Test
+	OrderBookEngine2 engine = new OrderBookEngine2();   ///Class name for algo file
+	engine.addBidOrder(10.7, 5000);
+	engine.addBidOrder(7.6, 6000);
+	engine.addBidOrder(8.0, 7000);
+	engine.addBidOrder(7.0, 8000);
+	
+	
+	
+	engine.addAskOffer(14.0, 1000);
+	engine.addAskOffer(10.9, 2000);
+	engine.addAskOffer(10.3, 3000);
+	engine.addAskOffer(10.7, 4000);
+	
+	Assert.assertEquals(4, engine.getAskLevel());
+	Assert.assertEquals(4, engine.getBidLevel());
+	
+	Assert.assertEquals(26000, engine.getBidQuantity());
+	Assert.assertEquals(10000, engine.getAskQuantity());
+	
+	 
+	engine.printOrderBook();
+	engine.receiveOrder(10.7, 2000, true);
+	
+
+}
